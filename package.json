@@ -13,7 +13,8 @@
     "lint": "npm run -s lint:js",
     "start": "webpack-dev-server --progress --inline --hot",
     "watch:test": "npm run -s test -- --watch",
-    "test": "ava"
+    "test": "ava",
+    "coverage": "nyc npm -s test"
   },
   "author": "",
   "license": "ISC",
@@ -31,11 +32,27 @@
     "eslint-plugin-import": "^1.14.0",
     "eslint-plugin-jsx-a11y": "^2.2.0",
     "eslint-plugin-react": "^6.2.0",
+    "nyc": "^8.1.0",
     "react": "^15.3.1",
     "react-addons-test-utils": "^15.3.1",
     "react-dom": "^15.3.1",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.0"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.{js,jsx}"
+    ],
+    "require": "babel-register",
+    "reporter": [
+      "html",
+      "text"
+    ],
+    "extension": [
+      ".js",
+      ".jsx"
+    ],
+    "all": true
   },
   "ava": {
     "files": [
