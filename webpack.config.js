@@ -6,7 +6,7 @@ const paths = {
 };
 
 module.exports = {
-  entry: `${paths.src}/scripts/main.js`,
+  entry: `${paths.src}/main.js`,
   output: {
     path: paths.dist,
     publicPath: '/',

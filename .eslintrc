@@ -1,10 +1,13 @@
 {
   "extends": "airbnb",
+  "rules": {
+    "react/jsx-filename-extension": "off"
+  },
   "settings": {
     "import/resolver": {
       "webpack": {
         "config": "webpack.config.js"
       }
     }
-  },
+  }
 }
