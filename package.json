@@ -9,7 +9,7 @@
     "build:static": "mkdir dist && cp ./src/*.html ./src/*.ico dist/",
     "build:js": "webpack",
     "build": "npm run -s build:static && npm run -s build:js",
-    "start": "webpack-dev-server --progress --inline",
+    "start": "webpack-dev-server --progress --inline --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -18,6 +18,10 @@
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.0"
   }

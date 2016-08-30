@@ -20,10 +20,15 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         include: paths.src,
         loader: 'babel-loader',
       },
     ],
+  },
+
+  resolve: {
+    root: paths.src,
+    extensions: ['', '.jsx', '.js'],
   },
 };
