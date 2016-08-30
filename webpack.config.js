@@ -1,8 +1,9 @@
 const path = require('path');
+const autoprefixer = require('autoprefixer');
 
 const paths = {
-  src: path.resolve('src'),
-  dist: path.resolve('dist'),
+  src: path.join(__dirname, 'src'),
+  dist: path.join(__dirname, 'dist'),
 };
 
 module.exports = {
@@ -24,7 +25,19 @@ module.exports = {
         include: paths.src,
         loader: 'babel-loader',
       },
+      {
+        test: /\.css$/,
+        loaders: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader',
+        ],
+      },
     ],
+  },
+
+  postcss() {
+    return [autoprefixer];
   },
 
   resolve: {
