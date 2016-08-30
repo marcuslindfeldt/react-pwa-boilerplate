@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from 'containers/app';
-import 'style.css';
+import 'styles/style.css';
 
 global.document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(

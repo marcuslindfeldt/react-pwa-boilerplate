@@ -4,6 +4,7 @@ const autoprefixer = require('autoprefixer');
 const paths = {
   src: path.join(__dirname, 'src'),
   dist: path.join(__dirname, 'dist'),
+  public: path.join(__dirname, 'public'),
 };
 
 module.exports = {
@@ -15,7 +16,7 @@ module.exports = {
   },
 
   devServer: {
-    contentBase: paths.src,
+    contentBase: [paths.src, paths.public],
   },
 
   module: {

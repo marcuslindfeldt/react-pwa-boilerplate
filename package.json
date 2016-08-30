@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rm -rf dist",
     "prebuild": "npm run -s clean",
-    "build:static": "mkdir dist && cp ./src/*.html ./src/*.ico dist/",
+    "build:static": "mkdir dist && cp -r ./public/* dist",
     "build:js": "webpack",
     "build": "npm run -s build:static && npm run -s build:js",
     "lint:js": "eslint .",
