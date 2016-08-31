@@ -3,9 +3,9 @@ const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 
 const paths = {
-  src: path.join(__dirname, 'src'),
-  dist: path.join(__dirname, 'dist'),
-  public: path.join(__dirname, 'public'),
+  src: path.resolve(__dirname, 'src'),
+  dist: path.resolve(__dirname, 'dist'),
+  public: path.resolve(__dirname, 'public'),
 };
 
 module.exports = {
@@ -51,7 +51,11 @@ module.exports = {
   ],
 
   resolve: {
-    root: paths.src,
+    alias: {
+      components: `${paths.src}/components`,
+      layouts: `${paths.src}/layouts`,
+      pages: `${paths.src}/pages`,
+    },
     extensions: ['', '.jsx', '.js'],
   },
 };
