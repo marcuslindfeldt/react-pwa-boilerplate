@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 
 const paths = {
@@ -40,6 +41,14 @@ module.exports = {
   postcss() {
     return [autoprefixer];
   },
+
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
+      },
+    }),
+  ],
 
   resolve: {
     root: paths.src,
