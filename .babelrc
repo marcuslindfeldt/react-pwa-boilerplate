@@ -11,6 +11,13 @@
           {
             "config": "${APP_ROOT}/webpack.config.js"
           }
+        ],
+        [
+          "babel-plugin-webpack-loaders",
+          {
+            "config": "${APP_ROOT}/webpack.config.js",
+            "verbose": false
+          }
         ]
       ]
     }

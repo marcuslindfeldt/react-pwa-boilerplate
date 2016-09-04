@@ -1,19 +1,19 @@
-.app-header {
+.appHeader {
   color: #fff;
   background-color: #333;
 }
 
-.app-header ul {
+.appHeader ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.app-header li {
+.appHeader li {
   display: inline;
 }
 
-.app-header li a {
+.appHeader li a {
   display: inline-block;
   padding: 16px 32px;
   text-decoration: none;
@@ -21,6 +21,6 @@
   font-weight: bold;
 }
 
-.app-header li a:hover {
+.appHeader li a:hover {
   background-color: #222;
 }

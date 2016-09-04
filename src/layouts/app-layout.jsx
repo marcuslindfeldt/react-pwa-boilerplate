@@ -1,10 +1,11 @@
 import React, { PropTypes } from 'react';
 import AppHeader from 'components/app-header/app-header';
+import styles from './app-layout.css';
 
 const AppLayout = ({ children }) => (
-  <div className="app-layout">
+  <div className={styles.appLayout}>
     <AppHeader />
-    <main>
+    <main className={styles.main}>
       {children}
     </main>
   </div>

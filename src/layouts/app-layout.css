@@ -1,11 +1,11 @@
-.app-layout {
+.appLayout {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-main {
+.main {
   flex-grow: 1;
   justify-content: center;
   display: flex;

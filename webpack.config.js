@@ -9,11 +9,11 @@ const paths = {
 };
 
 module.exports = {
-  entry: `${paths.src}/main.js`,
+  context: path.src,
+
   output: {
     path: paths.dist,
     publicPath: '/',
-    filename: 'bundle.js',
   },
 
   devServer: {
@@ -31,7 +31,7 @@ module.exports = {
         test: /\.css$/,
         loaders: [
           'style-loader',
-          'css-loader',
+          'css-loader?modules',
           'postcss-loader',
         ],
       },

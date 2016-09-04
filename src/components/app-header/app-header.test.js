@@ -3,7 +3,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import AppHeader from './app-header';
 
-test('App header - has correct class', t => {
+test('App header - exists', t => {
   const component = shallow(<AppHeader />);
-  t.truthy(component.find('header').hasClass('app-header'));
+  t.truthy(component.find('header'));
 });

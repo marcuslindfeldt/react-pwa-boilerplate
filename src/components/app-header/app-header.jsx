@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
+import styles from './app-header.css';
 
 const AppHeader = () => (
-  <header className="app-header">
+  <header className={styles.appHeader}>
     <nav>
       <ul>
         <li>
